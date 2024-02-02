@@ -7,13 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		851DCDE52A8911EB00F680F1 /* HabitBasicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851DCDE42A8911EB00F680F1 /* HabitBasicView.swift */; };
+		851DCDE72A89123400F680F1 /* DatabaseManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851DCDE62A89123400F680F1 /* DatabaseManagement.swift */; };
+		855B8DFE2A8A5D9B00325A71 /* HabitCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855B8DFD2A8A5D9B00325A71 /* HabitCreateView.swift */; };
+		85ACEB332A8A862400046AEE /* MCEmojiPicker in Frameworks */ = {isa = PBXBuildFile; productRef = 85ACEB322A8A862400046AEE /* MCEmojiPicker */; };
+		85B797EA2B14008C00449BDE /* HabitExplainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B797E92B14008C00449BDE /* HabitExplainView.swift */; };
 		85D8F7CE2A868855007EDFE1 /* Habit_TrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D8F7CD2A868855007EDFE1 /* Habit_TrackerApp.swift */; };
-		85D8F7D02A868855007EDFE1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D8F7CF2A868855007EDFE1 /* ContentView.swift */; };
+		85D8F7D02A868855007EDFE1 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D8F7CF2A868855007EDFE1 /* HomeView.swift */; };
 		85D8F7D22A868857007EDFE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85D8F7D12A868857007EDFE1 /* Assets.xcassets */; };
 		85D8F7D52A868857007EDFE1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85D8F7D42A868857007EDFE1 /* Preview Assets.xcassets */; };
 		85D8F7DF2A868857007EDFE1 /* Habit_TrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D8F7DE2A868857007EDFE1 /* Habit_TrackerTests.swift */; };
 		85D8F7E92A868857007EDFE1 /* Habit_TrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D8F7E82A868857007EDFE1 /* Habit_TrackerUITests.swift */; };
 		85D8F7EB2A868857007EDFE1 /* Habit_TrackerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D8F7EA2A868857007EDFE1 /* Habit_TrackerUITestsLaunchTests.swift */; };
+		85F2867E2A8BFA5800E93758 /* InterfaceFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F2867D2A8BFA5800E93758 /* InterfaceFunctions.swift */; };
+		85F286822A8D06A200E93758 /* NiceNotifications in Frameworks */ = {isa = PBXBuildFile; productRef = 85F286812A8D06A200E93758 /* NiceNotifications */; };
+		85F286852A8D072400E93758 /* DateBuilder in Frameworks */ = {isa = PBXBuildFile; productRef = 85F286842A8D072400E93758 /* DateBuilder */; };
+		85F286872A8D1C1400E93758 /* NotificationManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F286862A8D1C1400E93758 /* NotificationManagement.swift */; };
+		BF0342972B5DA05400CD03FF /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = BF0342962B5DA05400CD03FF /* SwiftUICharts */; };
+		BF03429A2B5DA32600CD03FF /* LightChart in Frameworks */ = {isa = PBXBuildFile; productRef = BF0342992B5DA32600CD03FF /* LightChart */; };
+		BF03429D2B5DA48C00CD03FF /* FLCharts in Frameworks */ = {isa = PBXBuildFile; productRef = BF03429C2B5DA48C00CD03FF /* FLCharts */; };
+		BF1D479C2B51971D001254B8 /* ScheduledNotificationsViewController in Frameworks */ = {isa = PBXBuildFile; productRef = BF1D479B2B51971D001254B8 /* ScheduledNotificationsViewController */; };
+		BF49E7CE2B3E0AB8003FFB1C /* OpenAIKit in Frameworks */ = {isa = PBXBuildFile; productRef = BF49E7CD2B3E0AB8003FFB1C /* OpenAIKit */; };
+		BF49E7D02B3E0BE9003FFB1C /* OpenAIInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF49E7CF2B3E0BE9003FFB1C /* OpenAIInterface.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +49,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		851DCDE42A8911EB00F680F1 /* HabitBasicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitBasicView.swift; sourceTree = "<group>"; };
+		851DCDE62A89123400F680F1 /* DatabaseManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManagement.swift; sourceTree = "<group>"; };
+		855B8DFD2A8A5D9B00325A71 /* HabitCreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitCreateView.swift; sourceTree = "<group>"; };
+		85B797E92B14008C00449BDE /* HabitExplainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitExplainView.swift; sourceTree = "<group>"; };
 		85D8F7CA2A868855007EDFE1 /* Habit Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Habit Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		85D8F7CD2A868855007EDFE1 /* Habit_TrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habit_TrackerApp.swift; sourceTree = "<group>"; };
-		85D8F7CF2A868855007EDFE1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		85D8F7CF2A868855007EDFE1 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		85D8F7D12A868857007EDFE1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		85D8F7D42A868857007EDFE1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		85D8F7DA2A868857007EDFE1 /* Habit TrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Habit TrackerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +63,10 @@
 		85D8F7E42A868857007EDFE1 /* Habit TrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Habit TrackerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		85D8F7E82A868857007EDFE1 /* Habit_TrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habit_TrackerUITests.swift; sourceTree = "<group>"; };
 		85D8F7EA2A868857007EDFE1 /* Habit_TrackerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habit_TrackerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		85F2867D2A8BFA5800E93758 /* InterfaceFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceFunctions.swift; sourceTree = "<group>"; };
+		85F2867F2A8D066E00E93758 /* Habit-Tracker-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Habit-Tracker-Info.plist"; sourceTree = SOURCE_ROOT; };
+		85F286862A8D1C1400E93758 /* NotificationManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManagement.swift; sourceTree = "<group>"; };
+		BF49E7CF2B3E0BE9003FFB1C /* OpenAIInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIInterface.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +74,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85F286822A8D06A200E93758 /* NiceNotifications in Frameworks */,
+				BF49E7CE2B3E0AB8003FFB1C /* OpenAIKit in Frameworks */,
+				BF1D479C2B51971D001254B8 /* ScheduledNotificationsViewController in Frameworks */,
+				BF0342972B5DA05400CD03FF /* SwiftUICharts in Frameworks */,
+				85ACEB332A8A862400046AEE /* MCEmojiPicker in Frameworks */,
+				BF03429A2B5DA32600CD03FF /* LightChart in Frameworks */,
+				85F286852A8D072400E93758 /* DateBuilder in Frameworks */,
+				BF03429D2B5DA48C00CD03FF /* FLCharts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,8 +125,16 @@
 		85D8F7CC2A868855007EDFE1 /* Habit Tracker */ = {
 			isa = PBXGroup;
 			children = (
+				85F2867F2A8D066E00E93758 /* Habit-Tracker-Info.plist */,
 				85D8F7CD2A868855007EDFE1 /* Habit_TrackerApp.swift */,
-				85D8F7CF2A868855007EDFE1 /* ContentView.swift */,
+				85D8F7CF2A868855007EDFE1 /* HomeView.swift */,
+				851DCDE42A8911EB00F680F1 /* HabitBasicView.swift */,
+				855B8DFD2A8A5D9B00325A71 /* HabitCreateView.swift */,
+				85B797E92B14008C00449BDE /* HabitExplainView.swift */,
+				85F2867D2A8BFA5800E93758 /* InterfaceFunctions.swift */,
+				85F286862A8D1C1400E93758 /* NotificationManagement.swift */,
+				851DCDE62A89123400F680F1 /* DatabaseManagement.swift */,
+				BF49E7CF2B3E0BE9003FFB1C /* OpenAIInterface.swift */,
 				85D8F7D12A868857007EDFE1 /* Assets.xcassets */,
 				85D8F7D32A868857007EDFE1 /* Preview Content */,
 			);
@@ -143,6 +182,16 @@
 			dependencies = (
 			);
 			name = "Habit Tracker";
+			packageProductDependencies = (
+				85ACEB322A8A862400046AEE /* MCEmojiPicker */,
+				85F286812A8D06A200E93758 /* NiceNotifications */,
+				85F286842A8D072400E93758 /* DateBuilder */,
+				BF49E7CD2B3E0AB8003FFB1C /* OpenAIKit */,
+				BF1D479B2B51971D001254B8 /* ScheduledNotificationsViewController */,
+				BF0342962B5DA05400CD03FF /* SwiftUICharts */,
+				BF0342992B5DA32600CD03FF /* LightChart */,
+				BF03429C2B5DA48C00CD03FF /* FLCharts */,
+			);
 			productName = "Habit Tracker";
 			productReference = 85D8F7CA2A868855007EDFE1 /* Habit Tracker.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +264,16 @@
 				Base,
 			);
 			mainGroup = 85D8F7C12A868855007EDFE1;
+			packageReferences = (
+				85ACEB312A8A862400046AEE /* XCRemoteSwiftPackageReference "MCEmojiPicker" */,
+				85F286802A8D06A200E93758 /* XCRemoteSwiftPackageReference "NiceNotifications" */,
+				85F286832A8D072400E93758 /* XCRemoteSwiftPackageReference "DateBuilder" */,
+				BF49E7CC2B3E0AB8003FFB1C /* XCRemoteSwiftPackageReference "openai-kit" */,
+				BF1D479A2B51971D001254B8 /* XCRemoteSwiftPackageReference "ScheduledNotificationsViewController" */,
+				BF0342952B5DA05400CD03FF /* XCRemoteSwiftPackageReference "chartview" */,
+				BF0342982B5DA32600CD03FF /* XCRemoteSwiftPackageReference "LightChart" */,
+				BF03429B2B5DA48B00CD03FF /* XCRemoteSwiftPackageReference "FLCharts" */,
+			);
 			productRefGroup = 85D8F7CB2A868855007EDFE1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,8 +316,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85D8F7D02A868855007EDFE1 /* ContentView.swift in Sources */,
+				851DCDE72A89123400F680F1 /* DatabaseManagement.swift in Sources */,
+				855B8DFE2A8A5D9B00325A71 /* HabitCreateView.swift in Sources */,
+				85F2867E2A8BFA5800E93758 /* InterfaceFunctions.swift in Sources */,
+				85F286872A8D1C1400E93758 /* NotificationManagement.swift in Sources */,
+				85D8F7D02A868855007EDFE1 /* HomeView.swift in Sources */,
+				85B797EA2B14008C00449BDE /* HabitExplainView.swift in Sources */,
 				85D8F7CE2A868855007EDFE1 /* Habit_TrackerApp.swift in Sources */,
+				851DCDE52A8911EB00F680F1 /* HabitBasicView.swift in Sources */,
+				BF49E7D02B3E0BE9003FFB1C /* OpenAIInterface.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,7 +411,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -399,7 +465,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -420,11 +486,14 @@
 				DEVELOPMENT_TEAM = 7RJ76H824H;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Habit-Tracker-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Habitrack;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -432,9 +501,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.finlaycm.Habit-Tracker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -449,11 +520,14 @@
 				DEVELOPMENT_TEAM = 7RJ76H824H;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Habit-Tracker-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Habitrack;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -461,9 +535,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.finlaycm.Habit-Tracker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -583,6 +659,116 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		85ACEB312A8A862400046AEE /* XCRemoteSwiftPackageReference "MCEmojiPicker" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/izyumkin/MCEmojiPicker";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.1;
+			};
+		};
+		85F286802A8D06A200E93758 /* XCRemoteSwiftPackageReference "NiceNotifications" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dreymonde/NiceNotifications.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		85F286832A8D072400E93758 /* XCRemoteSwiftPackageReference "DateBuilder" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dreymonde/DateBuilder";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.4;
+			};
+		};
+		BF0342952B5DA05400CD03FF /* XCRemoteSwiftPackageReference "chartview" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apppear/chartview.git";
+			requirement = {
+				kind = exactVersion;
+				version = "2.0.0-beta.8";
+			};
+		};
+		BF0342982B5DA32600CD03FF /* XCRemoteSwiftPackageReference "LightChart" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pichukov/LightChart.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.4;
+			};
+		};
+		BF03429B2B5DA48B00CD03FF /* XCRemoteSwiftPackageReference "FLCharts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/francescoleoni98/FLCharts.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.9.1;
+			};
+		};
+		BF1D479A2B51971D001254B8 /* XCRemoteSwiftPackageReference "ScheduledNotificationsViewController" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "http://github.com/nicephoton/ScheduledNotificationsViewController.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.5;
+			};
+		};
+		BF49E7CC2B3E0AB8003FFB1C /* XCRemoteSwiftPackageReference "openai-kit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dylanshine/openai-kit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.8.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		85ACEB322A8A862400046AEE /* MCEmojiPicker */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 85ACEB312A8A862400046AEE /* XCRemoteSwiftPackageReference "MCEmojiPicker" */;
+			productName = MCEmojiPicker;
+		};
+		85F286812A8D06A200E93758 /* NiceNotifications */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 85F286802A8D06A200E93758 /* XCRemoteSwiftPackageReference "NiceNotifications" */;
+			productName = NiceNotifications;
+		};
+		85F286842A8D072400E93758 /* DateBuilder */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 85F286832A8D072400E93758 /* XCRemoteSwiftPackageReference "DateBuilder" */;
+			productName = DateBuilder;
+		};
+		BF0342962B5DA05400CD03FF /* SwiftUICharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BF0342952B5DA05400CD03FF /* XCRemoteSwiftPackageReference "chartview" */;
+			productName = SwiftUICharts;
+		};
+		BF0342992B5DA32600CD03FF /* LightChart */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BF0342982B5DA32600CD03FF /* XCRemoteSwiftPackageReference "LightChart" */;
+			productName = LightChart;
+		};
+		BF03429C2B5DA48C00CD03FF /* FLCharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BF03429B2B5DA48B00CD03FF /* XCRemoteSwiftPackageReference "FLCharts" */;
+			productName = FLCharts;
+		};
+		BF1D479B2B51971D001254B8 /* ScheduledNotificationsViewController */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BF1D479A2B51971D001254B8 /* XCRemoteSwiftPackageReference "ScheduledNotificationsViewController" */;
+			productName = ScheduledNotificationsViewController;
+		};
+		BF49E7CD2B3E0AB8003FFB1C /* OpenAIKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BF49E7CC2B3E0AB8003FFB1C /* XCRemoteSwiftPackageReference "openai-kit" */;
+			productName = OpenAIKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 85D8F7C22A868855007EDFE1 /* Project object */;
 }

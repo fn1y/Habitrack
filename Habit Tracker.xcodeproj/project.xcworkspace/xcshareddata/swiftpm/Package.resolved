@@ -1,0 +1,185 @@
+{
+  "pins" : [
+    {
+      "identity" : "async-http-client",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/swift-server/async-http-client.git",
+      "state" : {
+        "revision" : "5ccda442f103792d67680aefc8d0a87392fbd66c",
+        "version" : "1.20.0"
+      }
+    },
+    {
+      "identity" : "chartview",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apppear/chartview.git",
+      "state" : {
+        "revision" : "7140b8b6fd7413ccbcf31b748b32233f08314dab",
+        "version" : "2.0.0-beta.8"
+      }
+    },
+    {
+      "identity" : "datebuilder",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/dreymonde/DateBuilder",
+      "state" : {
+        "revision" : "374ca554ed132f84bc97158901e6208c9608a6bc",
+        "version" : "0.1.4"
+      }
+    },
+    {
+      "identity" : "flcharts",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/francescoleoni98/FLCharts.git",
+      "state" : {
+        "revision" : "43e0e5ea6f26678a1e177c1bfc62aa6818781c30",
+        "version" : "1.9.1"
+      }
+    },
+    {
+      "identity" : "lightchart",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/pichukov/LightChart.git",
+      "state" : {
+        "revision" : "aa3d69ff883d4caa535586f5ce3b565b1bf14e4f",
+        "version" : "1.0.4"
+      }
+    },
+    {
+      "identity" : "mcemojipicker",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/izyumkin/MCEmojiPicker",
+      "state" : {
+        "revision" : "d77f5c693cc1aa7c57c5bfb15ca01a76b84f1cc7",
+        "version" : "1.2.1"
+      }
+    },
+    {
+      "identity" : "nicenotifications",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/dreymonde/NiceNotifications.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "dc24879ac7979efdea18a2c1f7a8bb6c364d16e6"
+      }
+    },
+    {
+      "identity" : "openai-kit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/dylanshine/openai-kit.git",
+      "state" : {
+        "revision" : "bf4e81668fe3c561afa29078121f3ff7d99da210",
+        "version" : "1.8.2"
+      }
+    },
+    {
+      "identity" : "schedulednotificationsviewcontroller",
+      "kind" : "remoteSourceControl",
+      "location" : "http://github.com/nicephoton/ScheduledNotificationsViewController.git",
+      "state" : {
+        "revision" : "3a5df16a6a61acf8977a88ee57846b6e71bea4ad",
+        "version" : "0.0.5"
+      }
+    },
+    {
+      "identity" : "swift-algorithms",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-algorithms",
+      "state" : {
+        "revision" : "f6919dfc309e7f1b56224378b11e28bab5bccc42",
+        "version" : "1.2.0"
+      }
+    },
+    {
+      "identity" : "swift-atomics",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-atomics.git",
+      "state" : {
+        "revision" : "cd142fd2f64be2100422d658e7411e39489da985",
+        "version" : "1.2.0"
+      }
+    },
+    {
+      "identity" : "swift-collections",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-collections.git",
+      "state" : {
+        "revision" : "d029d9d39c87bed85b1c50adee7c41795261a192",
+        "version" : "1.0.6"
+      }
+    },
+    {
+      "identity" : "swift-http-types",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-http-types",
+      "state" : {
+        "revision" : "1827dc94bdab2eb5f2fc804e9b0cb43574282566",
+        "version" : "1.0.2"
+      }
+    },
+    {
+      "identity" : "swift-log",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-log.git",
+      "state" : {
+        "revision" : "532d8b529501fb73a2455b179e0bbb6d49b652ed",
+        "version" : "1.5.3"
+      }
+    },
+    {
+      "identity" : "swift-nio",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-nio.git",
+      "state" : {
+        "revision" : "702cd7c56d5d44eeba73fdf83918339b26dc855c",
+        "version" : "2.62.0"
+      }
+    },
+    {
+      "identity" : "swift-nio-extras",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-nio-extras.git",
+      "state" : {
+        "revision" : "798c962495593a23fdea0c0c63fd55571d8dff51",
+        "version" : "1.20.0"
+      }
+    },
+    {
+      "identity" : "swift-nio-http2",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-nio-http2.git",
+      "state" : {
+        "revision" : "3bd9004b9d685ed6b629760fc84903e48efec806",
+        "version" : "1.29.0"
+      }
+    },
+    {
+      "identity" : "swift-nio-ssl",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-nio-ssl.git",
+      "state" : {
+        "revision" : "320bd978cceb8e88c125dcbb774943a92f6286e9",
+        "version" : "2.25.0"
+      }
+    },
+    {
+      "identity" : "swift-nio-transport-services",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-nio-transport-services.git",
+      "state" : {
+        "revision" : "ebf8b9c365a6ce043bf6e6326a04b15589bd285e",
+        "version" : "1.20.0"
+      }
+    },
+    {
+      "identity" : "swift-numerics",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-numerics.git",
+      "state" : {
+        "revision" : "0a5bc04095a675662cf24757cc0640aa2204253b",
+        "version" : "1.0.2"
+      }
+    }
+  ],
+  "version" : 2
+}
