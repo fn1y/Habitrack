@@ -43,6 +43,26 @@ struct HabitCreateView: View {
         
     }
     
+    func fieldsAreValid() -> Bool{
+        var returnBool = true
+        var dayArray = [Int]()
+        
+        let selectedDays = [selectedSun, selectedMon, selectedTue, selectedWed, selectedThu, selectedFri, selectedSat]
+        
+        for (count, isSelected) in selectedDays.enumerated(){
+            if isSelected {
+                        // The index starts from 0, so add 1 to get the corresponding day
+                        dayArray.append(count + 1)
+                    }
+        }
+        
+        if habitName.isEmpty || dayArray.isEmpty{
+            returnBool = false
+        }
+        
+        return returnBool
+    }
+    
     @Environment(\.presentationMode) var presentationMode
     
     //Setting up link "context" to the persistent storage. A bridge between this view and the actual database.
@@ -84,6 +104,8 @@ struct HabitCreateView: View {
     
     @State private var animateCount = Int(0)
     @State private var animateTick = false
+    
+    @State private var showErrorAlert = false
 
     
     var body: some View {
@@ -94,7 +116,15 @@ struct HabitCreateView: View {
                 Spacer()
                 Button(action: {
                     animateCount = animateCount + 1
-                    createBasic()
+                    
+                    if fieldsAreValid(){
+                        createBasic()
+                    }
+                    else{
+                        showErrorAlert = true
+                    }
+                    
+                    
                     
                     //Set the presentation mode to dismiss to go back to home page wahoo
                     presentationMode.wrappedValue.dismiss()
@@ -109,6 +139,9 @@ struct HabitCreateView: View {
                 .tint(.accentColor)
                 .controlSize(.large)
                 .buttonStyle(.borderedProminent)
+                .alert("Please check you have filled in all the fields!", isPresented: $showErrorAlert) {
+                            Button("OK", role: .cancel) { }
+                        }
             }
             ScrollView{
                 
@@ -203,7 +236,7 @@ struct HabitCreateView: View {
                     }
                     .frame(maxWidth: .infinity)
                     
-                    DatePicker("Time", selection: $selectedTime, displayedComponents: .hourAndMinute)
+                    DatePicker("Reminder Time", selection: $selectedTime, displayedComponents: .hourAndMinute)
                         .onChange(of: selectedTime) {
                             updateHourAndMinute()
                         }

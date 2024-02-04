@@ -32,17 +32,17 @@ struct HabitBasicView: View {
     @Query private var history: [CompletionHistory]
     
     //Querying database for habit using passed UUID THIS ERRORS OUT AND I DONT KNOW WHY IM GONNA ASK ON SWIFT FORUMS
-//    @Query(filter: #Predicate<BasicHabit> { item in
-//        item.id == habitId
-//    }) var currentHabit: [BasicHabit]
-//    
+    //    @Query(filter: #Predicate<BasicHabit> { item in
+    //        item.id == habitId
+    //    }) var currentHabit: [BasicHabit]
+    //
     
     //old unfinished solution for querying current habit
-//    func getHabitInfo(){
-//        let predicate = #Predicate<BasicHabit> { habit in
-//            habit.id == habitId
-//        }
-//    }
+    //    func getHabitInfo(){
+    //        let predicate = #Predicate<BasicHabit> { habit in
+    //            habit.id == habitId
+    //        }
+    //    }
     
     func deleteHabit(){
         
@@ -86,7 +86,7 @@ struct HabitBasicView: View {
         //Add it to the context
         context.insert(item)
         
-    
+        
     }
     
     func habitIsCompleted() -> Bool{
@@ -177,14 +177,35 @@ struct HabitBasicView: View {
             }
             ScrollView{
                 
-                VStack(alignment: .leading){
+                VStack(alignment: .center){
                     
-                    HStack(alignment: .top){
+                    VStack(alignment: .center){
                         
-                        VStack(alignment: .leading){
+                        VStack(alignment: .center){
                             
-                            Text(habitIcon)
-                                .font(.largeTitle)
+                            ZStack {
+                                Circle()
+                                    .stroke(Color.black, lineWidth: 0)
+                                    .fill(Color(UIColor.systemGray6))
+                                    .frame(width: 100, height: 100)
+                                Circle()
+                                    .stroke(Color(UIColor.systemGray6), lineWidth: 5)
+                                    .frame(width: 120, height: 120)
+                                    .opacity(0.8)
+                                Circle()
+                                    .stroke(Color(UIColor.systemGray6), lineWidth: 5)
+                                    .frame(width: 145, height: 145)
+                                    .opacity(0.5)
+                                Circle()
+                                    .stroke(Color(UIColor.systemGray6), lineWidth: 5)
+                                    .frame(width: 170, height: 170)
+                                    .opacity(0.25)
+                                Text(habitIcon)
+                                    .foregroundColor(.black)
+                                    .font(.largeTitle)
+                            }
+                            
+                            
                             Text(habitName)
                                 .font(.title2)
                                 .fontWeight(.bold)
@@ -195,9 +216,12 @@ struct HabitBasicView: View {
                         Spacer()
                         
                         
-                        Button("Delete") {
-                            presentDelConfirm = true
-                        }
+                        Button(action: {
+                                        presentDelConfirm = true
+                                    }) {
+                                        Image(systemName: "trash.circle.fill")
+                                            .font(.title)
+                                    }
                         .accentColor(/*@START_MENU_TOKEN@*/.red/*@END_MENU_TOKEN@*/)
                         .alert("Delete this habit?", isPresented: $presentDelConfirm){
                             Button("Cancel", role: .cancel){}
@@ -209,28 +233,29 @@ struct HabitBasicView: View {
                         }
                         
                     }
-                        Divider()
-                            .padding(.vertical, 10.0)
-                        
-                        Image("data placeholder")
-                            .resizable(resizingMode: .stretch)
-                        
-                        
-                        
-                    }
+                    
+                    Divider()
+                        .padding(.vertical, 10.0)
+                    
+                    Text(String(habitId))
+                        .monospaced()
+                    
+                    
                     
                 }
-                .padding([.leading, .bottom, .trailing], 20.0)
-                .multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/)
-                .frame(maxWidth: .infinity, alignment: .leading) // Stick to the left side
+                
             }
+            .padding([.leading, .bottom, .trailing], 20.0)
+            .multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/)
+            .frame(maxWidth: .infinity, alignment: .leading) // Stick to the left side
+        }
         
-        }
     }
-    
-    struct HabitBasicView_Previews: PreviewProvider {
-        static var previews: some View {
-            HabitBasicView(habitId: "", habitIcon: "Icon", habitName: "Name", freqString: "Frequency")
-        }
+}
+
+struct HabitBasicView_Previews: PreviewProvider {
+    static var previews: some View {
+        HabitBasicView(habitId: "", habitIcon: "👾", habitName: "Habit Name", freqString: "Daily at 20:00")
     }
+}
 
