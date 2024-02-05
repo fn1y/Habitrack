@@ -24,7 +24,7 @@ This is a school project, my very first application. Beware of messy fixes and g
 
 - 🟢 Habit Persistence (SwiftData)
 - 🟢 Completion History Tracking (SwiftData)
-- 🟢 Field validation when creating habits
+- 🟠 Field validation when creating habits (It doesn't work as intended")
 - 🟠 Notification System (need to manage habit deletion)
 - 🔴 Data Visualisations
 - 🔴 HomeView statistics (Streak, Amount remaining)
