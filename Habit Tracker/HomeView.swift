@@ -122,7 +122,7 @@ struct HomeView: View {
                             Spacer()
                         }
                         .padding(.bottom)
-                        .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color(hue: 1.0, saturation: 0.0, brightness: 0.0, opacity: 0.067)/*@END_MENU_TOKEN@*/)
+                        .background(Color(UIColor.systemGray6))
                         .cornerRadius(13.0)
                         
                         

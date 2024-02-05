@@ -32,7 +32,7 @@ func formattedFrequencyString(days: Array<Int>, hrs: Int, mins: Int) -> String{
     if days == [1,2,3,4,5,6,7]{
         returnString.append("Daily")
     }
-    else if days == [6,7]{
+    else if days == [1,7]{
         returnString.append("Weekends")
     }
     else{

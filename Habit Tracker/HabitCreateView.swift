@@ -21,9 +21,9 @@ struct HabitCreateView: View {
         
         for (count, isSelected) in selectedDays.enumerated(){
             if isSelected {
-                        // The index starts from 0, so add 1 to get the corresponding day
-                        dayArray.append(count + 1)
-                    }
+                // The index starts from 0, so add 1 to get the corresponding day
+                dayArray.append(count + 1)
+            }
         }
         
         if habitType == 1{
@@ -51,9 +51,9 @@ struct HabitCreateView: View {
         
         for (count, isSelected) in selectedDays.enumerated(){
             if isSelected {
-                        // The index starts from 0, so add 1 to get the corresponding day
-                        dayArray.append(count + 1)
-                    }
+                // The index starts from 0, so add 1 to get the corresponding day
+                dayArray.append(count + 1)
+            }
         }
         
         if habitName.isEmpty || dayArray.isEmpty{
@@ -106,7 +106,7 @@ struct HabitCreateView: View {
     @State private var animateTick = false
     
     @State private var showErrorAlert = false
-
+    
     
     var body: some View {
         
@@ -119,20 +119,18 @@ struct HabitCreateView: View {
                     
                     if fieldsAreValid(){
                         createBasic()
+                        //Set the presentation mode to dismiss to go back to home page wahoo
+                        presentationMode.wrappedValue.dismiss()
                     }
                     else{
                         showErrorAlert = true
                     }
                     
-                    
-                    
-                    //Set the presentation mode to dismiss to go back to home page wahoo
-                    presentationMode.wrappedValue.dismiss()
                 }) {
                     HStack {
                         Image(systemName: "plus.rectangle.fill.on.rectangle.fill")
                             .symbolEffect(.bounce.down.byLayer, value:animateCount)
-                
+                        
                         Text("Create Habit")
                     }
                 }
@@ -140,8 +138,8 @@ struct HabitCreateView: View {
                 .controlSize(.large)
                 .buttonStyle(.borderedProminent)
                 .alert("Please check you have filled in all the fields!", isPresented: $showErrorAlert) {
-                            Button("OK", role: .cancel) { }
-                        }
+                    Button("OK", role: .cancel) { }
+                }
             }
             ScrollView{
                 
@@ -156,13 +154,13 @@ struct HabitCreateView: View {
                         .padding(.vertical, 10.0)
                     
                     
-//                    Text("Do you want to build a new habit, or abstain from a current one?")
-//                    
-//                    Picker(selection: $habitBuildType, label: /*@START_MENU_TOKEN@*/Text("Picker")/*@END_MENU_TOKEN@*/) {
-//                        Text("Build").tag(1)
-//                        Text("Abstain").tag(2)
-//                    }
-                    .pickerStyle(.segmented)
+                    //                    Text("Do you want to build a new habit, or abstain from a current one?")
+                    //                    
+                    //                    Picker(selection: $habitBuildType, label: /*@START_MENU_TOKEN@*/Text("Picker")/*@END_MENU_TOKEN@*/) {
+                    //                        Text("Build").tag(1)
+                    //                        Text("Abstain").tag(2)
+                    //                    }
+                        .pickerStyle(.segmented)
                     
                     Text("Emoji Icon")
                         .font(.headline)
@@ -262,12 +260,12 @@ struct HabitCreateView: View {
                             TextField("Start Value", value: $progressCurrentValue, format: .number)
                                 .textFieldStyle(.roundedBorder)
                                 .keyboardType(.numberPad)
-
+                            
                             
                             TextField("End Value", value: $progressGoalValue, format: .number)
                                 .textFieldStyle(.roundedBorder)
                                 .keyboardType(.numberPad)
-
+                            
                             
                         }
                     }
@@ -298,7 +296,7 @@ struct HabitCreateView: View {
     
     struct DayButton: ButtonStyle {
         var isSelected: Bool
-
+        
         func makeBody(configuration: Configuration) -> some View {
             configuration.label
                 .padding(10.0)
