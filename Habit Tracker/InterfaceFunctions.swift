@@ -133,3 +133,14 @@ func getDateString() -> String{
 
 }
 
+func isHabitDueToday(dayArray: Array<Int>) -> Bool{
+    let currentDay = getDayOfWeek()
+    
+    if dayArray.contains(currentDay){
+        return true
+    }
+    else{
+        return false
+    }
+    
+}

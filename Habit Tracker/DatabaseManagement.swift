@@ -90,11 +90,3 @@ class CompletionHistory: Identifiable {
         
     }
 }
-
-//func deleteHabit(deleteId: String, habitArray: [Habit]){
-//    for habit in habitArray{
-//        if habit.id == deleteId{
-//            
-//        }
-//    }
-//}

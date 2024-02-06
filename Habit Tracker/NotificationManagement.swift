@@ -12,22 +12,12 @@ import SwiftData
 import UIKit
 import UserNotifications
 
-
+//this is just for debug purposes, removes all scheduled and delivered notifs
 func handleNotifications(){
     let center = UNUserNotificationCenter.current()
     center.removeAllDeliveredNotifications()    // to remove all delivered notifications
     center.removeAllPendingNotificationRequests()   // to remove all pending notifications
 }
-
-//func convertDayToEnum(dayInt: Int) -> day? {
-//    let dayEnums: [Int: DayOfWeek] = [1: .sunday, 2: .monday, 3: .tuesday, 4: .wednesday, 5: .thursday, 6: .friday, 7: .saturday]
-//    return dayEnums[dayInt]
-//}
-
-//THIS ENTIRE SOLUTION IS CURRENTLY A BODGE WHILE I FIGURE OUT HOW TO PROPERLY IMPLEMENT THINGS
-//IT SCHEDULES A MONTH'S WORTH OF NOTIFICATIONS UPON HABIT CREATION AND DOES NOT ACCOUNT FOR ANYTHING LIKE THE HABIT BEING DELETED OR SOMEHOW EDITED
-
-
 
 func scheduleNotifs(habitId: String, hour: Int, minute: Int, days: Array<Int>, bodyText: String, bodyIcon: String){
     let body = String(bodyIcon + " " + bodyText)
@@ -84,77 +74,3 @@ func deleteNotifs(identifier: String) {
         UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [currentIdentifier])
     }
 }
-//        
-//        
-//        func oldScheduleNotifications(habitId: String, hour: Int, minute: Int, days: Array<Int>, bodyText: String, bodyIcon: String){
-//            
-//            let body = String(bodyIcon + " " + bodyText)
-//            
-//            for day in days{
-//                
-//                if day == 1{
-//                    
-//                    LocalNotifications.schedule(permissionStrategy: .askSystemPermissionIfNeeded) {
-//                        EveryWeek(forWeeks: 4, starting: .thisWeek)
-//                            .weekday(.sunday)
-//                            .at(hour: hour, minute: minute)
-//                            .schedule(title: "Habit Reminder", body: body)
-//                    }
-//                }
-//                
-//                else if day == 2{
-//                    LocalNotifications.schedule(permissionStrategy: .askSystemPermissionIfNeeded) {
-//                        EveryWeek(forWeeks: 4, starting: .thisWeek)
-//                            .weekday(.monday)
-//                            .at(hour: hour, minute: minute)
-//                            .schedule(title: "Habit Reminder", body: body)
-//                    }
-//                }
-//                
-//                else if day == 3{
-//                    LocalNotifications.schedule(permissionStrategy: .askSystemPermissionIfNeeded) {
-//                        EveryWeek(forWeeks: 4, starting: .thisWeek)
-//                            .weekday(.tuesday)
-//                            .at(hour: hour, minute: minute)
-//                            .schedule(title: "Habit Reminder", body: body)
-//                    }
-//                }
-//                
-//                else if day == 4{
-//                    LocalNotifications.schedule(permissionStrategy: .askSystemPermissionIfNeeded) {
-//                        EveryWeek(forWeeks: 4, starting: .thisWeek)
-//                            .weekday(.wednesday)
-//                            .at(hour: hour, minute: minute)
-//                            .schedule(title: "Habit Reminder", body: body)
-//                    }
-//                }
-//                
-//                else if day == 5{
-//                    LocalNotifications.schedule(permissionStrategy: .askSystemPermissionIfNeeded) {
-//                        EveryWeek(forWeeks: 4, starting: .thisWeek)
-//                            .weekday(.thursday)
-//                            .at(hour: hour, minute: minute)
-//                            .schedule(title: "Habit Reminder", body: body)
-//                    }
-//                }
-//                
-//                else if day == 6{
-//                    LocalNotifications.schedule(permissionStrategy: .askSystemPermissionIfNeeded) {
-//                        EveryWeek(forWeeks: 4, starting: .thisWeek)
-//                            .weekday(.friday)
-//                            .at(hour: hour, minute: minute)
-//                            .schedule(title: "Habit Reminder", body: body)
-//                    }
-//                }
-//                
-//                else if day == 7{
-//                    LocalNotifications.schedule(permissionStrategy: .askSystemPermissionIfNeeded) {
-//                        EveryWeek(forWeeks: 4, starting: .thisWeek)
-//                            .weekday(.saturday)
-//                            .at(hour: hour, minute: minute)
-//                            .schedule(title: "Habit Reminder", body: body)
-//                    }
-//                }
-//            }
-//        }
-//        

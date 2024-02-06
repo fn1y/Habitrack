@@ -31,19 +31,6 @@ struct HabitBasicView: View {
     @Query private var habit: [BasicHabit]
     @Query private var history: [CompletionHistory]
     
-    //Querying database for habit using passed UUID THIS ERRORS OUT AND I DONT KNOW WHY IM GONNA ASK ON SWIFT FORUMS
-    //    @Query(filter: #Predicate<BasicHabit> { item in
-    //        item.id == habitId
-    //    }) var currentHabit: [BasicHabit]
-    //
-    
-    //old unfinished solution for querying current habit
-    //    func getHabitInfo(){
-    //        let predicate = #Predicate<BasicHabit> { habit in
-    //            habit.id == habitId
-    //        }
-    //    }
-    
     func deleteHabit(){
         
         deleteNotifs(identifier:habitId)

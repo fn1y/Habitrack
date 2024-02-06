@@ -33,6 +33,8 @@ struct HomeView: View {
     //Get a random quote from Motivationals.swift
     @State private var randomQuote = randQuote()
     
+    @State private var remainingCount = 0
+    
     @State private var activeHabitUUID = UserDefaults.standard.string(forKey: "ActiveUUID")
     
     //init. a visibility parameter for the name change popup
@@ -56,6 +58,18 @@ struct HomeView: View {
         }
         
         return returnArray
+    }
+    
+    func getRemainingCount() -> Int{
+        var returnValue = 0
+        
+        for item in basicHabit {
+            if isHabitDueToday(dayArray: item.days){
+                returnValue += 1
+            }
+        }
+        
+        return returnValue
     }
 
     
@@ -161,11 +175,14 @@ struct HomeView: View {
                             VStack{
                                 HStack{
                                     Spacer()
-                                    Text("0")
+                                    Text(String(remainingCount))
                                         .font(.largeTitle)
                                         .foregroundColor(Color.white)
                                         .padding(20.0)
                                         .monospaced()
+                                        .onAppear {
+                                                                                remainingCount = getRemainingCount()
+                                                                            }
                                     Spacer()
                                     
                                 }
@@ -262,6 +279,7 @@ struct HomeView: View {
                                         .fontWeight(.semibold)
                                         .foregroundColor(Color.gray)
                                     }
+                                
                                 }
                                 
                             }
@@ -303,29 +321,7 @@ struct HomeView: View {
                     .background(Color(UIColor.systemGray6))
                     .cornerRadius(13.0)
                     
-                    
-                    
                 }
-                
-                //                    Button("Clear Habits Database") {
-                //                        do {
-                //                            try modelContext.delete(model: BasicHabit.self)
-                //                        } catch {
-                //                            print("Failed to clear habits.")
-                //                        }
-                //                    }
-                //                    .buttonStyle(.bordered)
-                //                    .foregroundColor(.red)
-                //
-                //                    Button("Clear History Database") {
-                //                        do {
-                //                            try modelContext.delete(model: CompletionHistory.self)
-                //                        } catch {
-                //                            print("Failed to clear habits.")
-                //                        }
-                //                    }
-                //                    .buttonStyle(.bordered)
-                //                    .foregroundColor(.red)
                 
             }
             .padding()
