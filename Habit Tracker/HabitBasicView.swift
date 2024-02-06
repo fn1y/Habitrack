@@ -59,6 +59,9 @@ struct HabitBasicView: View {
         } catch {
             print("Habit ID wasn't found (for some reason)")
         }
+        
+        deleteNotifs(identifier:habitId)
+        
     }
     
     func completeHabit(){
