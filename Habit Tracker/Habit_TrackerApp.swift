@@ -11,10 +11,17 @@ import SwiftData
 @main
 struct Habit_TrackerApp: App {
     
+    //Container config tutorial thanks to Sean Allen
+    let container: ModelContainer = {
+        let schema = Schema([BasicHabit.self, CompletionHistory.self])
+        let container = try! ModelContainer(for: schema, configurations: [])
+        return container
+    }()
+    
     var body: some Scene {
         WindowGroup {
             HomeView()
         }
-        .modelContainer(for: [BasicHabit.self, CompletionHistory.self])
+        .modelContainer(container)
     }
 }

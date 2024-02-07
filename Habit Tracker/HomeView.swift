@@ -229,7 +229,7 @@ struct HomeView: View {
                         
                         let currentFreqString = formattedFrequencyString(days: item.days, hrs: item.timeHours, mins: item.timeMins)
                         
-                        NavigationLink(destination: HabitBasicView(habitId: item.id, habitIcon: item.icon, habitName: item.name, freqString: currentFreqString)){
+                        NavigationLink(destination: HabitBasicView(habitId: item.id, habitIcon: item.icon, habitName: item.name, freqString: currentFreqString, progressCurrent: item.progressCurrent, progressGoal: item.progressGoal)){
                             HStack {
                                 VStack(alignment: .leading){
                                     HStack{
@@ -259,11 +259,11 @@ struct HomeView: View {
                                         let progressDecimal = Double(item.progressCurrent) / Double(item.progressGoal)
                                         let progressPercentage =  (Double(item.progressCurrent) / Double(item.progressGoal)) * 100
                                         
-                                        let _ = print("progress current is ", String(habitProgressCurrent))
-                                        let _ = print("progress goal is ", String(habitProgressGoal))
-                                        
-                                        let _ = print("CALC progress decimal is ", String(progressDecimal))
-                                        let _ = print("CALC progress percentage is ", String(progressPercentage))
+//                                        let _ = print("progress current is ", String(habitProgressCurrent))
+//                                        let _ = print("progress goal is ", String(habitProgressGoal))
+//                                        
+//                                        let _ = print("CALC progress decimal is ", String(progressDecimal))
+//                                        let _ = print("CALC progress percentage is ", String(progressPercentage))
                                         
                                         
                                         ProgressView(value: progressDecimal)

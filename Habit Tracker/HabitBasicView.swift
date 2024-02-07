@@ -15,6 +15,8 @@ struct HabitBasicView: View {
     var habitIcon: String
     var habitName: String
     var freqString: String
+    var progressCurrent: Int
+    var progressGoal: Int
     
     //Pinging todays date for the completion and completion check operations. We need todays date to see if the habit is already listed as done for today
     let today = getDate()
@@ -112,11 +114,8 @@ struct HabitBasicView: View {
         return returnBool
     }
     
-    struct notCompleteButton{
-        
-    }
-    
-    struct completeButton{
+    func updateHabitProgress(updateValue: Int){
+        // Get the current BasicHabit object based on passed habitId
         
     }
     
@@ -143,6 +142,7 @@ struct HabitBasicView: View {
                 }
                 //If habit is due today but HAS NOT been completed, let the user mark as complete.
                 else if habitIsToday(){
+                    
                     Button("Mark as Complete") {
                         completeHabit()
                     }
@@ -201,6 +201,39 @@ struct HabitBasicView: View {
                                 .fontWeight(.bold)
                             Text(freqString)
                                 .font(.title3)
+                            
+                            if progressGoal > 0{
+                                
+                                let habitProgressCurrent = progressCurrent
+                                let habitProgressGoal = progressGoal
+                                
+                                let progressDecimal = Double(progressCurrent) / Double(progressGoal)
+                                let progressPercentage =  (Double(progressCurrent) / Double(progressGoal)) * 100
+                                
+                                //                                        let _ = print("progress current is ", String(habitProgressCurrent))
+                                //                                        let _ = print("progress goal is ", String(habitProgressGoal))
+                                //
+                                //                                        let _ = print("CALC progress decimal is ", String(progressDecimal))
+                                //                                        let _ = print("CALC progress percentage is ", String(progressPercentage))
+                                
+                                
+                                VStack{
+                                    ProgressView(value: progressDecimal)
+                                        .padding(-1.0)
+                                    
+                                    
+                                    HStack{
+                                        Text(String(progressPercentage) + "%")
+                                        Spacer()
+                                        Text(String(progressCurrent) + " of " + String(progressGoal))
+                                        
+                                    }
+                                    .font(.caption)
+                                    .fontWeight(.semibold)
+                                    .foregroundColor(Color.gray)
+                                }
+                                .frame(width: 300)
+                            }
                         }
                         
                         Spacer()
@@ -230,6 +263,13 @@ struct HabitBasicView: View {
                     Text(String(habitId))
                         .monospaced()
                     
+                    if progressGoal > 0{
+                        Text(String("Type: Progress"))
+                    }
+                    else{
+                        Text(String("Type: Basic"))
+                    }
+                    
                     
                     
                 }
@@ -245,7 +285,7 @@ struct HabitBasicView: View {
 
 struct HabitBasicView_Previews: PreviewProvider {
     static var previews: some View {
-        HabitBasicView(habitId: "", habitIcon: "👾", habitName: "Habit Name", freqString: "Daily at 20:00")
+        HabitBasicView(habitId: "", habitIcon: "👾", habitName: "Habit Name", freqString: "Daily at 20:00", progressCurrent: 15, progressGoal: 40)
     }
 }
 
