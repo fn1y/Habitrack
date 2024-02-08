@@ -233,7 +233,7 @@ struct HomeView: View {
                                         VStack(alignment: .leading) {
                                             Text(item.name)
                                                 .font(.headline)
-                                            Text(currentFreqString)
+                                            Text(formattedFrequencyString(days: item.days, hrs: item.timeHours, mins: item.timeMins))
                                                 .font(.caption)
                                             
                                         }

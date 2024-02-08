@@ -25,35 +25,30 @@ struct HabitBasicView: View {
     @State private var presentDelConfirm: Bool = false
     @State private var deletionConfirmed: Bool = false
     @State private var showUncompletableAlert: Bool = false
+    @State private var showProgressEditAlert: Bool = false
+    @State private var progressEditValue = ""
+    
+    //I'm getting the current presentationmode as a variable which I can then change, so I can dismiss this view when the delete action is completed
     @Environment(\.presentationMode) var presentationMode
     
     //Setting up link "context" to the persistent storage. A bridge between this view and the actual database.
     @Environment(\.modelContext) private var context
     
-    //Query the database and get entry from it in the form of an array
+    //Query the databases and get all entries from them in the form of arrays. Not very efficient, but required for an equally unefficient function I made which I need to update
     @Query private var habit: [BasicHabit]
     @Query private var history: [CompletionHistory]
     
     func deleteHabit(){
         
         deleteNotifs(identifier:currentHabit.id)
-        
-        // Create a predicate to search for the current habit item in the database via its UUID
-//        let predicate = #Predicate<BasicHabit> { habit in
-//            habit.id == currentHabit.id
-//        }
-//        
-//        //Try to delete it. Must handle this otherwise app crashes due to no result so printing an error. UUID should exist though as we wouldn't already be on this SwiftUI view without it.
-//        do {
-//            try context.delete(model: BasicHabit.self, where: predicate)
-//        } catch {
-//            print("Habit ID wasn't found (for some reason)")
-//        }
+        context.delete(currentHabit)
         
     }
     
     func completeHabit(){
+        //this is REALLY SILLY AND INEFFICIENT! NEED TO FIND A BETTER WAY TO DO THIS!! UNNECESSARILY CHECKING THROUGH ENTIRE DATABASES AS ARRAYS IS NOT GOOD!!!
         
+        //Why did I print out the entire databases here??
         print(habit)
         print(history)
         
@@ -113,11 +108,11 @@ struct HabitBasicView: View {
         return returnBool
     }
     
-    func updateHabitProgress(updateValue: Int){
-        // Get the current BasicHabit object based on passed habitId
+    func updateHabitProgress(updateValue: String){
         
-        
-        
+        if let newValue = Int(progressEditValue) {
+            currentHabit.progressCurrent = newValue
+                        }
     }
     
     var body: some View {
@@ -141,10 +136,30 @@ struct HabitBasicView: View {
                     .alert(isPresented: $showUncompletableAlert) {
                         Alert(title: Text("Already Completed"), message: Text("You've already marked this habit as complete! Keep up the good work."), dismissButton: .default(Text("Got it"))) }
                 }
-                //If habit is due today but HAS NOT been completed, let the user mark as complete.
-                else if habitIsToday(){
+                //If habit is due today, and is a progress habit, but HAS NOT been completed, let the user mark as complete.
+                else if habitIsToday() && currentHabit.progressGoal > 0 {
                     
-                    Button("Mark as Complete") {
+                    Button("Log Progress & Mark as Done") {
+                        showProgressEditAlert = true
+                    }
+                    .tint(.green)
+                    .controlSize(.large)
+                    .buttonStyle(.borderedProminent)
+                    .alert("What's your current progress now?", isPresented: $showProgressEditAlert) {
+                        TextField("New current progress", text: $progressEditValue)
+                            .keyboardType(.numberPad)  // Set keyboard type to number pad
+                            .textInputAutocapitalization(.never)
+                        Button("OK") {
+                                updateHabitProgress(updateValue: progressEditValue)
+                                completeHabit()
+                            }
+                        Button("Cancel", role: .cancel) { }
+                    }
+                }
+                //If habit is due today, and is NOT a progress habit, and HAS NOT been completed, let the user mark as complete.
+                else if habitIsToday() {
+                    
+                    Button("Mark as Done") {
                         completeHabit()
                     }
                     .tint(.green)
@@ -211,12 +226,6 @@ struct HabitBasicView: View {
                                 let progressDecimal = Double(currentHabit.progressCurrent) / Double(currentHabit.progressGoal)
                                 let progressPercentage =  (Double(currentHabit.progressCurrent) / Double(currentHabit.progressGoal)) * 100
                                 
-                                //                                        let _ = print("progress current is ", String(habitProgressCurrent))
-                                //                                        let _ = print("progress goal is ", String(habitProgressGoal))
-                                //
-                                //                                        let _ = print("CALC progress decimal is ", String(progressDecimal))
-                                //                                        let _ = print("CALC progress percentage is ", String(progressPercentage))
-                                
                                 
                                 VStack{
                                     ProgressView(value: progressDecimal)
@@ -226,7 +235,7 @@ struct HabitBasicView: View {
                                     HStack{
                                         Text(String(progressPercentage) + "%")
                                         Spacer()
-                                        Text(String(currentHabit.progressCurrent) + " of " + String(currentHabit.progressCurrent))
+                                        Text(String(currentHabit.progressCurrent) + " of " + String(currentHabit.progressGoal))
                                         
                                     }
                                     .font(.caption)
@@ -265,10 +274,12 @@ struct HabitBasicView: View {
                         .monospaced()
                     
                     if currentHabit.progressGoal > 0{
-                        Text(String("Type: Progress"))
+                        Text(String("Progress or Segmented"))
+                            .monospaced()
                     }
                     else{
-                        Text(String("Type: Basic"))
+                        Text(String("Basic"))
+                            .monospaced()
                     }
                     
                     
@@ -286,7 +297,7 @@ struct HabitBasicView: View {
 
 struct HabitBasicView_Previews: PreviewProvider {
     static var previews: some View {
-        HabitBasicView(currentHabit: BasicHabit(icon: "👻", name: "Please god", days: [1,2,3,4,5,6,7], timeHours: 10, timeMins: 30, progressCurrent: -1, progressGoal: -1))
+        HabitBasicView(currentHabit: BasicHabit(icon: "👻", name: "Read Book", days: [1,2,3,4,5,6,7], timeHours: 10, timeMins: 30, progressCurrent: 30, progressGoal: 100))
     }
 }
 
