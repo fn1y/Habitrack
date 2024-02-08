@@ -71,7 +71,7 @@ struct HomeView: View {
         
         return returnValue
     }
-
+    
     
     
     var body: some View {
@@ -181,8 +181,8 @@ struct HomeView: View {
                                         .padding(20.0)
                                         .monospaced()
                                         .onAppear {
-                                                                                remainingCount = getRemainingCount()
-                                                                            }
+                                            remainingCount = getRemainingCount()
+                                        }
                                     Spacer()
                                     
                                 }
@@ -196,12 +196,6 @@ struct HomeView: View {
                                 
                             }
                         }
-                        
-                        
-                        
-                        
-                        
-                        
                     }
                     
                     //
@@ -229,7 +223,7 @@ struct HomeView: View {
                         
                         let currentFreqString = formattedFrequencyString(days: item.days, hrs: item.timeHours, mins: item.timeMins)
                         
-                        NavigationLink(destination: HabitBasicView(habitId: item.id, habitIcon: item.icon, habitName: item.name, freqString: currentFreqString, progressCurrent: item.progressCurrent, progressGoal: item.progressGoal)){
+                        NavigationLink(destination: HabitBasicView(currentHabit: item)){
                             HStack {
                                 VStack(alignment: .leading){
                                     HStack{
@@ -259,11 +253,11 @@ struct HomeView: View {
                                         let progressDecimal = Double(item.progressCurrent) / Double(item.progressGoal)
                                         let progressPercentage =  (Double(item.progressCurrent) / Double(item.progressGoal)) * 100
                                         
-//                                        let _ = print("progress current is ", String(habitProgressCurrent))
-//                                        let _ = print("progress goal is ", String(habitProgressGoal))
-//                                        
-//                                        let _ = print("CALC progress decimal is ", String(progressDecimal))
-//                                        let _ = print("CALC progress percentage is ", String(progressPercentage))
+                                        //                                        let _ = print("progress current is ", String(habitProgressCurrent))
+                                        //                                        let _ = print("progress goal is ", String(habitProgressGoal))
+                                        //
+                                        //                                        let _ = print("CALC progress decimal is ", String(progressDecimal))
+                                        //                                        let _ = print("CALC progress percentage is ", String(progressPercentage))
                                         
                                         
                                         ProgressView(value: progressDecimal)
@@ -279,7 +273,7 @@ struct HomeView: View {
                                         .fontWeight(.semibold)
                                         .foregroundColor(Color.gray)
                                     }
-                                
+                                    
                                 }
                                 
                             }
@@ -301,7 +295,7 @@ struct HomeView: View {
                         showNotificationDebug = true
                         handleNotifications()
                         print("all notifications done been cleare :D")
-
+                        
                     }
                     .font(.headline)
                     .fontWeight(.semibold)
@@ -312,7 +306,7 @@ struct HomeView: View {
                     
                     Button("Print all scheduled notifs") {
                         debugPrintAllNotifs()
-
+                        
                     }
                     .font(.headline)
                     .fontWeight(.semibold)
